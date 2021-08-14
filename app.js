@@ -9,19 +9,19 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/home.html');
+  res.render('home');
 });
 
 app.get('/about', (req, res) => {
-  res.sendFile(__dirname + '/views/about.html');
+  res.render('about');
 });
 
 app.get('/works', (req, res) => {
-  res.sendFile(__dirname + '/views/works.html');
+  res.render('works');
 });
 
 app.get('/gallery', (req, res) => {
-  res.sendFile(__dirname + '/views/gallery.html');
+  res.render('gallery');
 });
 
 app.listen(3001);
