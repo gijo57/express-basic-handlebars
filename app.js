@@ -9,19 +9,27 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('home', {
+    title: 'Home page'
+  });
 });
 
 app.get('/about', (req, res) => {
-  res.render('about');
+  res.render('about', {
+    title: 'About'
+  });
 });
 
 app.get('/works', (req, res) => {
-  res.render('works');
+  res.render('works', {
+    title: 'Achievements'
+  });
 });
 
 app.get('/gallery', (req, res) => {
-  res.render('gallery');
+  res.render('gallery', {
+    title: 'Gallery'
+  });
 });
 
 app.listen(3001);
