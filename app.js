@@ -3,6 +3,8 @@ const hbs = require('hbs');
 
 const app = express();
 
+hbs.registerPartials(__dirname + '/views/partials');
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
@@ -28,7 +30,8 @@ app.get('/works', (req, res) => {
 
 app.get('/gallery', (req, res) => {
   res.render('gallery', {
-    title: 'Gallery'
+    title: 'Gallery',
+    photos: ['obama1.jpg', 'obama2.jpg']
   });
 });
 
